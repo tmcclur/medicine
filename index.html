@@ -12,13 +12,13 @@
             var d = new Date()
             var hour = d.getHours()
             var diff = Math.round((d - init)/(1000*60*60*24))
-            if (hour < 11){
+            if (hour < 12){
                 document.writeln('Morning Medicine: ')
                 document.writeln('Give Charlie 60mg of phenobarbital in peanut butter. ')
             } else {
                 document.writeln('Afternoon Medicine: ')
                 document.writeln('Give Charlie 60mg of phenobarbital in peanut butter. ')
-                if ((diff % 2) == 0){
+                if ((diff % 2) != 0){
                     document.writeln('Give Charlie 125mg vetprofen in peanut butter. ')
                 }
                 if (d.getDate() == 1) {
